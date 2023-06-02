@@ -1,0 +1,16 @@
+
+{% extends 'master.html' %}
+
+{% block title%}
+members
+{% endblock %}
+{% block content%}
+<div class="mycard">
+    <ul>
+    {% for x in myperson %}
+        <li onclick=window.location="details/{{x.slug}}">{{x.firstname}} , {{x.lastname}}</li>
+    {% endfor %}
+    </ul>
+</div>
+    <h1><a href="javascript:history.back()">Go back</a></h1>
+{% endblock%}
